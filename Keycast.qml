@@ -8,10 +8,11 @@ import "KeycastModel.js" as M
 
 // Keycast — shows the name of each key as it is pressed.
 //
-// Event source: `keyd monitor` (keyd is always running on this box and already
-// normalizes names to leftcontrol / rightalt / rightmeta / ...). Needs read
-// access to /dev/input/event*, i.e. membership in the `input` group. Until that
-// is granted the process just produces nothing and the overlay stays hidden.
+// Event source: `keyd monitor`. keyd normalizes key names to leftcontrol /
+// rightalt / rightmeta / ... and reports its effective (post-remap) output.
+// Requires keyd running and read access to /dev/input/event*, i.e. membership
+// in the `input` group; without both, `keyd monitor` produces nothing and the
+// overlay stays hidden. See README.md ("Setting up keyd").
 Item {
   id: root
 
