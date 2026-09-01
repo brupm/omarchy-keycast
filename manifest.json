@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.brupm.keycast",
+  "name": "Keycast",
+  "version": "1.0.0",
+  "author": "brupm",
+  "license": "MIT",
+  "description": "Shows the name of each key as it is pressed.",
+  "kinds": ["panel"],
+  "keepLoaded": true,
+  "entryPoints": { "panel": "Keycast.qml" }
+}
